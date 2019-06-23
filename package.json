@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "dr-browser",
+  "version": "0.0.0-dev.0",
+  "description": "A collection of strange functions, for browser",
+  "author": "dr-js",
+  "license": "MIT",
+  "repository": "github:dr-js/dr-browser",
+  "bin": "bin/index.js",
+  "browser": "library/index.js",
+  "scripts": {
+    "// script ======================": "",
+    "script-base": "babel-node ./script quiet",
+    "script-pack": "babel-node ./script quiet pack",
+    "script-pack-test": "babel-node ./script verbose pack test",
+    "script-publish": "babel-node ./script pack publish",
+    "script-publish-dev": "babel-node ./script pack publish-dev",
+    "script-generate-spec": "babel-node ./script/generateSpec ./tempFileDelete.config.json",
+    "script-delete-temp-build-file": "dr-js -c ./tempFileDelete.config.json",
+    "// build =======================": "",
+    "build-webpack": "babel-node ./script/webpack production profile",
+    "build-webpack-dev": "babel-node ./script/webpack development watch",
+    "build-module": "cross-env BABEL_ENV=module babel ./source --out-dir ./output-gitignore/module",
+    "// test-browser ================": "",
+    "test-browser": "babel-node ./script/testBrowser production",
+    "test-browser-dev": "babel-node ./script/testBrowser development",
+    "// =============================": "",
+    "analyze-stat": "npx webpack-bundle-analyzer .temp-gitignore/profile-stat.json",
+    "test": "npm run script-pack-test",
+    "prepack": "echo \"Error: pack with script-*\" && exit 1"
+  },
+  "engines": {
+    "node": ">=10.15",
+    "npm": ">=6"
+  },
+  "dependencies": {
+    "dr-js": "0.21.1-dev.3"
+  },
+  "devDependencies": {
+    "dr-dev": "0.0.6-dev.4",
+    "dr-dev-web-puppeteer": "0.0.6-dev.4"
+  },
+  "sideEffects": false
+}
