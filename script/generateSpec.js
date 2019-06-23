@@ -4,7 +4,7 @@ import { writeFileSync, existsSync } from 'fs'
 
 import { collectSourceRouteMap } from 'dr-dev/module/node/export/parse'
 import { generateIndexScript, generateExportInfo } from 'dr-dev/module/node/export/generate'
-import { autoAppendMarkdownHeaderLink, renderMarkdownExportPath, renderMarkdownExportTree } from 'dr-dev/module/node/export/renderMarkdown'
+import { renderMarkdownAutoAppendHeaderLink, renderMarkdownExportPath, renderMarkdownExportTree } from 'dr-dev/module/node/export/renderMarkdown'
 import { runMain } from 'dr-dev/module/main'
 
 const PATH_ROOT = resolve(__dirname, '..')
@@ -41,10 +41,8 @@ runMain(async (logger) => {
     execSync('npm run script-delete-temp-build-file', { cwd: fromRoot(), stdio: 'ignore', shell: true })
   }
 
-  logger.padLog(`collect sourceRouteMap`)
+  logger.padLog(`generate exportInfoMap`)
   const sourceRouteMap = await collectSourceRouteMap({ pathRootList: [ fromRoot('source') ], logger })
-
-  logger.padLog(`generate exportInfo`)
   const exportInfoMap = generateExportInfo({ sourceRouteMap })
 
   logger.log(`output: SPEC.md`)
@@ -52,7 +50,7 @@ runMain(async (logger) => {
   writeFileSync(fromRoot('SPEC.md'), [
     '# Specification',
     '',
-    ...autoAppendMarkdownHeaderLink(
+    ...renderMarkdownAutoAppendHeaderLink(
       '#### Export Path',
       ...renderMarkdownExportPath({ exportInfoMap, rootPath: PATH_ROOT }),
       '',

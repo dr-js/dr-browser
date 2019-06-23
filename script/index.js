@@ -6,7 +6,6 @@ import { runMain, argvFlag } from 'dr-dev/module/main'
 import { initOutput, packOutput, verifyNoGitignore, publishOutput } from 'dr-dev/module/output'
 import { processFileList, fileProcessorBabel, fileProcessorWebpack } from 'dr-dev/module/fileProcessor'
 import { getTerserOption, minifyFileListWithTerser } from 'dr-dev/module/minify'
-import { writeLicenseFile } from 'dr-dev/module/license'
 
 import { binary } from 'dr-js/module/common/format'
 import { modify } from 'dr-js/module/node/file/Modify'
@@ -58,8 +57,11 @@ runMain(async (logger) => {
   await verifyNoGitignore({ path: fromRoot('source'), logger })
 
   const packageJSON = await initOutput({ fromRoot, fromOutput, logger })
-
   if (!argvFlag('pack')) return
+  if (argvFlag('test', 'publish', 'publish-dev')) {
+    logger.padLog(`lint source`)
+    execSync(`npm run lint`, execOptionRoot)
+  }
 
   await buildOutput({ logger })
   await processOutput({ logger })

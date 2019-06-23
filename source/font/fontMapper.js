@@ -3,7 +3,8 @@ const DEFAULT_ON_MISSING_REQUEST = (symbol) => null
 const createFontMapper = (fontSize = 16, lineHeight = 20, onMissingRequest = DEFAULT_ON_MISSING_REQUEST) => {
   let configFontSize = fontSize
   let configLineHeight = lineHeight
-  let symbolMetricsMap = {} // symbol -> { deltaX, offsetX, offsetY }
+
+  const symbolMetricsMap = {} // symbol -> { deltaX, offsetX, offsetY }
   let symbolDefault
   let symbolMetricsDefault
 
