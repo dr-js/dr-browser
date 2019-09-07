@@ -1,9 +1,9 @@
-import { CLOCK_PER_SECOND } from 'dr-js/module/common/time'
-import { linear } from 'dr-js/module/common/math/easing'
-import { add, sub, getLength, scale, lerp } from 'dr-js/module/common/geometry/D2/Vector'
+import { CLOCK_PER_SECOND } from '@dr-js/core/module/common/time'
+import { linear } from '@dr-js/core/module/common/math/easing'
+import { add, sub, getLength, scale, lerp } from '@dr-js/core/module/common/geometry/D2/Vector'
 import { createInterpolationAutoTimer, createVectorAccumulator } from 'source/module/MotionAutoTimer'
 
-import { POINTER_EVENT_TYPE, ENHANCED_POINTER_EVENT_TYPE } from 'dr-js/module/browser/input/PointerEvent'
+import { POINTER_EVENT_TYPE, ENHANCED_POINTER_EVENT_TYPE } from '@dr-js/core/module/browser/input/PointerEvent'
 
 const { START } = POINTER_EVENT_TYPE
 const { DRAG_MOVE, DRAG_END, DRAG_CANCEL } = ENHANCED_POINTER_EVENT_TYPE

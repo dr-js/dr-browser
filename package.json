@@ -1,12 +1,11 @@
 {
   "private": true,
-  "name": "dr-browser",
-  "version": "0.0.0-dev.2",
+  "name": "@dr-js/browser",
+  "version": "0.0.0-dev.0",
   "description": "A collection of strange functions, for browser",
   "author": "dr-js",
   "license": "MIT",
   "repository": "github:dr-js/dr-browser",
-  "bin": "bin/index.js",
   "browser": "library/index.js",
   "scripts": {
     "// script ======================": "",
@@ -34,11 +33,11 @@
     "npm": ">=6.10"
   },
   "dependencies": {
-    "dr-js": "^0.23.0 || ^0.23.0-dev.2"
+    "@dr-js/core": "^0.0.0 || ^0.0.0-dev.0"
   },
   "devDependencies": {
-    "dr-dev": "0.0.7-dev.2",
-    "dr-dev-web-puppeteer": "0.0.7-dev.2"
+    "@dr-js/dev": "0.0.0-dev.0",
+    "@dr-js/dev-web-puppeteer": "0.0.0-dev.0"
   },
   "sideEffects": false
 }

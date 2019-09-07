@@ -1,4 +1,4 @@
-import { getEndianness } from 'dr-js/module/env/function'
+import { getEndianness } from '@dr-js/core/module/env/function'
 
 // operation
 const getUint32RGBA = getEndianness() === 'little'

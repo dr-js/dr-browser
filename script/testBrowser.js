@@ -1,13 +1,13 @@
 import { resolve } from 'path'
 
-import { getScriptFileListFromPathList } from 'dr-dev/module/node/file'
-import { runMain, argvFlag } from 'dr-dev/module/main'
-import { compileWithWebpack, commonFlag } from 'dr-dev/module/webpack'
-import { testWithPuppeteer } from 'dr-dev/module/puppeteer'
+import { getScriptFileListFromPathList } from '@dr-js/dev/module/node/file'
+import { runMain, argvFlag } from '@dr-js/dev/module/main'
+import { compileWithWebpack, commonFlag } from '@dr-js/dev/module/webpack'
+import { testWithPuppeteer } from '@dr-js/dev/module/puppeteer'
 
-import { readFileAsync } from 'dr-js/module/node/file/function'
-import { createDirectory } from 'dr-js/module/node/file/Directory'
-import { modifyDelete } from 'dr-js/module/node/file/Modify'
+import { readFileAsync } from '@dr-js/core/module/node/file/function'
+import { createDirectory } from '@dr-js/core/module/node/file/Directory'
+import { modifyDelete } from '@dr-js/core/module/node/file/Modify'
 
 const PATH_ROOT = resolve(__dirname, '..')
 const PATH_TEMP = resolve(__dirname, '../.temp-gitignore')

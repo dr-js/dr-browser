@@ -1,4 +1,4 @@
-import { strictEqual } from 'dr-js/module/common/verify'
+import { strictEqual } from '@dr-js/core/module/common/verify'
 
 import {
   getQuickCanvas,

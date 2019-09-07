@@ -1,6 +1,6 @@
-import { CLOCK_PER_SECOND, clock, createTimer, requestFrameUpdate, cancelFrameUpdate } from 'dr-js/module/common/time'
-import { clamp } from 'dr-js/module/common/math/base'
-import { fromOrigin, getLength, add, scale } from 'dr-js/module/common/geometry/D2/Vector'
+import { CLOCK_PER_SECOND, clock, createTimer, requestFrameUpdate, cancelFrameUpdate } from '@dr-js/core/module/common/time'
+import { clamp } from '@dr-js/core/module/common/math/base'
+import { fromOrigin, getLength, add, scale } from '@dr-js/core/module/common/geometry/D2/Vector'
 
 const createInterpolationAutoTimer = ({
   func, // (rate) => {}, will get move distance in px

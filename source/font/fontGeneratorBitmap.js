@@ -1,4 +1,4 @@
-import { loadText, loadImage } from 'dr-js/module/browser/resource'
+import { loadText, loadImage } from '@dr-js/core/module/browser/resource'
 import { createCanvasElement, applyImageElementExt, canvasElementToCanvasImageData, canvasImageDataToCanvasElement } from 'source/graphic/ImageData'
 import { scale as scaleCanvasImageData } from 'source/graphic/CanvasImageDataOperation'
 
