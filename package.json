@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@dr-js/browser",
-  "version": "0.0.0-dev.0",
+  "version": "0.0.0-dev.1",
   "description": "A collection of strange functions, for browser",
   "author": "dr-js",
   "license": "MIT",
@@ -29,15 +29,15 @@
     "prepack": "echo \"Error: pack with script-*\" && exit 1"
   },
   "engines": {
-    "node": ">=10.16",
-    "npm": ">=6.10"
+    "node": ">=12.13",
+    "npm": ">=6.12"
   },
   "dependencies": {
-    "@dr-js/core": "^0.0.0 || ^0.0.0-dev.0"
+    "@dr-js/core": "^0.0.0 || ^0.0.0-dev.4"
   },
   "devDependencies": {
-    "@dr-js/dev": "0.0.0-dev.0",
-    "@dr-js/dev-web-puppeteer": "0.0.0-dev.0"
+    "@dr-js/dev": "0.0.0-dev.2",
+    "@dr-js/dev-web-puppeteer": "0.0.0-dev.2"
   },
   "sideEffects": false
 }

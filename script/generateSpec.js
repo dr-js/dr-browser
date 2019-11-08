@@ -30,8 +30,8 @@ const generateTempFile = ({ sourceRouteMap, logger }) => {
   Object.entries(indexScriptMap).forEach(([ path, data ]) => writeTempFile(path, data))
 
   writeFileSync(PATH_FILE_DELETE_CONFIG, JSON.stringify({
-    drJsFileModifyDelete: [ ...tempFileList, PATH_FILE_DELETE_CONFIG ],
-    drJsQuiet: true
+    modifyDelete: [ ...tempFileList, PATH_FILE_DELETE_CONFIG ],
+    quiet: true
   }))
 }
 
