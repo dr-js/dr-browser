@@ -7,11 +7,11 @@
 
 A collection of strange functions, for browser
 
-[i:npm]: https://img.shields.io/npm/v/@dr-js/browser.svg?colorB=blue
-[i:npm-dev]: https://img.shields.io/npm/v/@dr-js/browser/dev.svg
+[i:npm]: https://img.shields.io/npm/v/@dr-js/browser?colorB=blue
+[i:npm-dev]: https://img.shields.io/npm/v/@dr-js/browser/dev
 [l:npm]: https://npm.im/@dr-js/browser
-[i:ci]: https://img.shields.io/travis/dr-js/dr-browser/master.svg
-[l:ci]: https://travis-ci.org/dr-js/dr-browser
+[i:ci]: https://img.shields.io/github/workflow/status/dr-js/dr-browser/ci-test
+[l:ci]: https://github.com/dr-js/dr-browser/actions?query=workflow:ci-test
 [i:size]: https://packagephobia.now.sh/badge?p=@dr-js/browser
 [l:size]: https://packagephobia.now.sh/result?p=@dr-js/browser
 
