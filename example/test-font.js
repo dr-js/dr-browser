@@ -1,4 +1,4 @@
-window.addContent(``, `
+window.addContent('', `
 <div class="flex-column" style="overflow: auto; width: 100vw; align-items: center; font-family: monospace;">
   <canvas id="testFont" width="300" height="120"></canvas>
   <hr />
@@ -41,10 +41,10 @@ window.addContent(``, `
     const fontBitmapCanvasContext2d = qS('#testFontBitmap').getContext('2d')
 
     const fontRender = createFontRender()
-    fontRender.applyFontConfig({ fontSize: FONT_SIZE, lineHeight: LINE_HEIGHT, fontStyle: 'normal', fontFamily: `Arial`, fillStyle: '#F00' })
+    fontRender.applyFontConfig({ fontSize: FONT_SIZE, lineHeight: LINE_HEIGHT, fontStyle: 'normal', fontFamily: 'Arial', fillStyle: '#F00' })
 
     const fontRenderMono = createFontRender()
-    fontRenderMono.applyFontConfig({ fontSize: FONT_SIZE, lineHeight: LINE_HEIGHT, fontStyle: 'normal', fontFamily: `monospace`, fillStyle: '#00F' })
+    fontRenderMono.applyFontConfig({ fontSize: FONT_SIZE, lineHeight: LINE_HEIGHT, fontStyle: 'normal', fontFamily: 'monospace', fillStyle: '#00F' })
 
     const fontRenderBitmap = createFontRenderBitmap()
     await fontRenderBitmap.loadBitmapFontData('./fontBitmap.json', FONT_SIZE, LINE_HEIGHT)

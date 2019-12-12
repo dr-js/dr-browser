@@ -4,7 +4,7 @@ window.addContent(`
 </style>
 `, `
 <div id="root" class="flex-column" style="overflow: auto; width: 100vw; min-height: 100vh; align-items: center; font-family: monospace;">
-${`<button>AAA</button><hr /><p>BBB</p><hr />`.repeat(100)}
+${'<button>AAA</button><hr /><p>BBB</p><hr />'.repeat(100)}
 </div>
 <div id="INDICATOR-MASK" class="indicator" style="display: none; pointer-events: none; box-shadow: inset 0 0 0 1px #000;"></div>
 <div id="INDICATOR-RECT" class="indicator" style="width: 0; height: 0; background: rgba(0,0,255,0.4); box-shadow: inset 0 0 0 1px #00f;"></div>
@@ -112,7 +112,7 @@ ${`<button>AAA</button><hr /><p>BBB</p><hr />`.repeat(100)}
         if (startEdge) {
           eventState.event.preventDefault()
           qS('#INDICATOR-MASK').style.display = ''
-          qS('#INDICATOR-MASK').style.backgroundColor = `rgba(0, 0, 0, 0)`
+          qS('#INDICATOR-MASK').style.backgroundColor = 'rgba(0, 0, 0, 0)'
         }
         Object.assign(qS('#INDICATOR-RECT').style, startEdge === 'left' || startEdge === 'right' ? { width: '0', height: '100vh', transform: '' }
           : startEdge === 'top' || startEdge === 'bottom' ? { width: '100vw', height: '0', transform: '' }
