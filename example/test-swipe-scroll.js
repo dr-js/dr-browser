@@ -8,6 +8,7 @@ window.addContent(`
 <div id="SCROLL" class="drag-box" style="transform: translate(300px, 400px);">SCROLL</div>
 `, () => {
   const {
+    document,
     qS,
     Dr: {
       Common: {

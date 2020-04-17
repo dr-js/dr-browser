@@ -10,6 +10,7 @@ window.addContent('', `
 </div>
 `, async () => {
   const {
+    document,
     qS, cE, aCL,
     DrBrowser: {
       Font: { createFontRender, createFontRenderBitmap },

@@ -1,3 +1,5 @@
+const { document } = window
+
 let BUFFER_CANVAS
 let BUFFER_CANVAS_CONTEXT2D
 const getQuickCanvas = () => (BUFFER_CANVAS = BUFFER_CANVAS || document.createElement('canvas'))

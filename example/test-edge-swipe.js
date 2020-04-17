@@ -12,6 +12,7 @@ ${'<button>AAA</button><hr /><p>BBB</p><hr />'.repeat(100)}
 <div id="INDICATOR-V" class="indicator" style="width: 1px;"></div>
 `, () => {
   const {
+    document,
     qS, log,
     Dr: {
       Common: {

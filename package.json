@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@dr-js/browser",
-  "version": "0.2.0-dev.0",
+  "version": "0.2.0-dev.1",
   "description": "A collection of strange functions, for browser",
   "author": "dr-js",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "// build =======================": "",
     "build-webpack": "node -r @babel/register ./script/webpack production profile",
     "build-webpack-dev": "node -r @babel/register ./script/webpack development watch",
-    "build-module": "cross-env BABEL_ENV=module babel ./source --out-dir ./output-gitignore/module",
+    "build-module": "dr-dev --EE BABEL_ENV=module -E -- babel ./source --out-dir ./output-gitignore/module",
     "// test-browser ================": "",
     "test-browser": "node -r @babel/register ./script/testBrowser production",
     "test-browser-dev": "node -r @babel/register ./script/testBrowser development",
@@ -29,15 +29,15 @@
     "prepack": "echo \"Error: pack with script-*\" && exit 1"
   },
   "engines": {
-    "node": ">=12.13",
-    "npm": ">=6.12"
+    "node": ">=12.16",
+    "npm": ">=6.14"
   },
   "dependencies": {
-    "@dr-js/core": "^0.3.0 || ^0.3.0-dev.5"
+    "@dr-js/core": "0.4.0-dev.5"
   },
   "devDependencies": {
-    "@dr-js/dev": "0.3.0-dev.4",
-    "@dr-js/dev-web-puppeteer": "0.3.0-dev.4"
+    "@dr-js/dev": "0.4.0-dev.3",
+    "@dr-js/dev-web-puppeteer": "0.4.0-dev.3"
   },
   "sideEffects": false
 }
